@@ -32,7 +32,7 @@ export default function ProductList() {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
-    toast.success(`${product.productName} başarıyla eklendi`)
+    toast.success(`${product.productName} added successfully`)
   }
 
   const deleteProduct = (product) => {
@@ -42,7 +42,7 @@ export default function ProductList() {
     }).catch(error => {
       console.error('Error deleting resource:', error);
     });
-    toast.success(`${product.productName} başarıyla silindi`)
+    toast.success(`${product.productName} deleted successfully`)
   }
 
   return (
@@ -50,14 +50,14 @@ export default function ProductList() {
       <Table celled>
         <TableHeader>
           <TableRow>
-            <TableHeaderCell>ürün adı </TableHeaderCell>
-            <TableHeaderCell>birim fiyatı</TableHeaderCell>
-            <TableHeaderCell>stok adedi</TableHeaderCell>
-            <TableHeaderCell>açıklama</TableHeaderCell>
-            <TableHeaderCell>kategori</TableHeaderCell>
-            <TableHeaderCell>Sepete Ekle</TableHeaderCell>
-            <TableHeaderCell>Ürünü Sil</TableHeaderCell>
-            <TableHeaderCell>Ürünü Güncelle</TableHeaderCell>
+            <TableHeaderCell>product name </TableHeaderCell>
+            <TableHeaderCell>unit price</TableHeaderCell>
+            <TableHeaderCell>units in stock</TableHeaderCell>
+            <TableHeaderCell>quantity per unit</TableHeaderCell>
+            <TableHeaderCell>categories</TableHeaderCell>
+            <TableHeaderCell>add to cart</TableHeaderCell>
+            <TableHeaderCell>delete product</TableHeaderCell>
+            <TableHeaderCell>update product</TableHeaderCell>
           </TableRow>
         </TableHeader>
 
@@ -70,9 +70,9 @@ export default function ProductList() {
                 <TableCell>{product.unitsInStock}</TableCell>
                 <TableCell>{product.quantityPerUnit}</TableCell>
                 <TableCell>{product.category?.categoryName}</TableCell>
-                <TableCell><Button color='green' onClick={() => handleAddToCart(product)}>Sepete Ekle</Button></TableCell>
-                <TableCell><Button color='red' onClick={() => deleteProduct(product)}>Sil</Button></TableCell>
-                <TableCell><Button color='blue' onClick={() => navigate(`/product/update/${product.productName}`)}>Güncelle</Button></TableCell>
+                <TableCell><Button color='green' onClick={() => handleAddToCart(product)}>add to cart</Button></TableCell>
+                <TableCell><Button color='red' onClick={() => deleteProduct(product)}>delete</Button></TableCell>
+                <TableCell><Button color='blue' onClick={() => navigate(`/product/update/${product.productName}`)}>update</Button></TableCell>
               </TableRow>
             ))
           }

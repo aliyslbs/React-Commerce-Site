@@ -8,7 +8,7 @@ export default function CartSummary() {
 
   return (
     <div>
-      <Dropdown item text='Sepetiniz'>
+      <Dropdown item text='your cart'>
         <DropdownMenu>
           {
             cartItems.map((cartItem)=>(
@@ -22,7 +22,7 @@ export default function CartSummary() {
           }
           
           <Dropdown.Divider/>
-          <DropdownItem as={NavLink} to="/cart">Sepete Git</DropdownItem>
+          <DropdownItem as={NavLink} to="/cart">go to cart</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </div>

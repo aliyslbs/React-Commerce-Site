@@ -59,7 +59,7 @@ export default function ProductUpdate() {
                     <label>Stok Açıklaması</label>
                     <input type="text" name="quantityPerUnit" value={product?.quantityPerUnit} onChange={handleChange} />
                 </div>
-                <Button color='green' type="submit" placeholder="kaydet" onClick={handleSubmit}>kaydet</Button>
+                <Button color='green' type="submit" placeholder="kaydet" onClick={handleSubmit}>update</Button>
             </form>
         </div>
     )

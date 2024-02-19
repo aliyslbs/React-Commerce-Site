@@ -8,8 +8,8 @@ export default function SingOut(probs) {
         <div>
             <div>
                 <MenuItem>
-                    <Button primary onClick={probs.signIn}>Giriş Yap</Button>
-                    <Button onClick={() => navigate("/register") } primary style={{marginLeft:"0.5em"}}>Kayıt Ol</Button>
+                    <Button primary onClick={probs.signIn}>Login</Button>
+                    <Button onClick={() => navigate("/register") } primary style={{marginLeft:"0.5em"}}>Register</Button>
                 </MenuItem>
             </div>
         </div>

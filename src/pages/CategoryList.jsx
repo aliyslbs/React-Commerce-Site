@@ -15,7 +15,7 @@ export default function CategoryList() {
     <div>
       <Table>
         <TableHeader>
-          <TableHeaderCell>Kategoriler</TableHeaderCell>
+          <TableHeaderCell>Categories</TableHeaderCell>
         </TableHeader>
         <TableBody>
           {

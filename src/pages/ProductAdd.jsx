@@ -8,8 +8,8 @@ import CategoryService from '../services/categoryService'
 export default function ProductAdd() {
     const initialValues = { productName: "", unitPrice: 10 }
     const schema = Yup.object({
-        productName: Yup.string().required("ürün adı zorunludur"),
-        unitPrice: Yup.number().required("ürün fiyatı girmek zorunludur")
+        productName: Yup.string().required("product name is required"),
+        unitPrice: Yup.number().required("unit price is required")
 
     })
 
@@ -19,8 +19,8 @@ export default function ProductAdd() {
         unitsInStock: 0,
         quantityPerUnit: "",
         category: {
-            categoryId:1,
-            categoryName:"Beverages"
+            categoryId:0,
+            categoryName:""
         }
     })
    
@@ -73,7 +73,7 @@ export default function ProductAdd() {
                             </option>)
                         }
                     </select>
-                    <Button color='green' type="submit" placeholder="kaydet">kaydet</Button>
+                    <Button color='green' type="submit" placeholder="add">add</Button>
                 </Form>
 
             </Formik>
