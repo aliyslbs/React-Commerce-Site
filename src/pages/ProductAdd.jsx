@@ -62,10 +62,10 @@ export default function ProductAdd() {
                 validationSchema={schema}
             >
                 <Form className='ui form' onSubmit={handleSubmit}>
-                    <input value={data.productName} onChange={handleChange} name="productName" placeholder="ürün adı"></input>
-                    <input value={data.unitPrice} onChange={handleChange} name="unitPrice" placeholder="ürün fiyatı"></input>
-                    <input value={data.unitsInStock} onChange={handleChange} name="unitsInStock" placeholder="stoktaki miktar"></input>
-                    <input value={data.quantityPerUnit} onChange={handleChange} name="quantityPerUnit" placeholder="açıklama"></input>
+                    <input value={data.productName} onChange={handleChange} name="productName" placeholder="product name"></input>
+                    <input value={data.unitPrice} onChange={handleChange} name="unitPrice" placeholder="unit price"></input>
+                    <input value={data.unitsInStock} onChange={handleChange} name="unitsInStock" placeholder="units in stock"></input>
+                    <input value={data.quantityPerUnit} onChange={handleChange} name="quantityPerUnit" placeholder="quantity per unit"></input>
                     <select name="categories" multiple="" class="ui fluid dropdown" id="selectedCategory" onChange={handleChange}>
                         {categorys.map(category =>
                             <option value={data.category.categoryName}   >
